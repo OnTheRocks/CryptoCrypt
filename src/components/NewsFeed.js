@@ -1,4 +1,4 @@
-import { axios } from 'axios';
+import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 
 const NewsFeed = () => {
@@ -10,7 +10,7 @@ const NewsFeed = () => {
       url: 'https://cryptocurrency-news-live.p.rapidapi.com/crypto-news',
       headers: {
       'x-rapidapi-host': 'cryptocurrency-news-live.p.rapidapi.com',
-      'x-rapidapi-key': 'fe2b6dd757mshb3aacce4d48a5c3p13eceejsn7aa19c5330bb'
+      'x-rapidapi-key': process.env.REACT_APP_RAPID_API_KEY
       }
     };
 
@@ -22,11 +22,15 @@ const NewsFeed = () => {
     });
   }, [])
 
-  console.log(articles)
+      const first10 = articles?.slice(0,10)
 
   return (
     <div className='NewsFeed'>
-      NewsFeed!
+      <h2>Crypto News Feed</h2>
+      {first10?.map((article, _index) => (
+        <div key={_index}>
+           <a href={article.url}><p>{article.title}</p></a>
+        </div>))}
     </div>
   )
 }
