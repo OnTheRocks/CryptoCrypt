@@ -12,6 +12,11 @@ code {
     monospace;
 }
 
+.App {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 
 .NewsFeed {
   background-color: red;
@@ -19,4 +24,8 @@ code {
 
 .CurrencyConverter {
   background-color: green;
+}
+
+.ExchangeRate {
+  background-color: royalblue;
 }
