@@ -9,6 +9,8 @@ const CurrencyConverter = () => {
   const [chosenSecondaryCurrency, setChosenSecondaryCurrency] = useState('USD')
   const [amount, setAmount] = useState(1)
   const [exchangeRate, setExchangeRate] = useState(0)
+  const [primaryCurrencyExchanged, setPrimaryCurrencyExchanged] = useState('BTC')
+  const [secondaryCurrencyExchanged, setSecondaryCurrencyExchanged] = useState('USD')
   const [result, setResult] = useState(0)
 
   console.log(chosenPrimaryCurrency, chosenSecondaryCurrency)
@@ -29,6 +31,8 @@ const CurrencyConverter = () => {
       console.log(response.data)
       setExchangeRate(response.data["Realtime Currency Exchange Rate"]["5. Exchange Rate"])
       setResult(response.data["Realtime Currency Exchange Rate"]["5. Exchange Rate"] * amount)
+      setPrimaryCurrencyExchanged(chosenPrimaryCurrency)
+      setSecondaryCurrencyExchanged(chosenSecondaryCurrency)
     }).catch((error) => {
       console.error(error)
     })
@@ -88,6 +92,8 @@ const CurrencyConverter = () => {
         
       <ExchangeRate 
         exchangeRate={exchangeRate}
+        chosenPrimaryCurrency={primaryCurrencyExchanged}
+        chosenSecondaryCurrency={secondaryCurrencyExchanged}
       />
     </div>
   )
