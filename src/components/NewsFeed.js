@@ -5,14 +5,14 @@ const NewsFeed = () => {
   const [articles, setArticles] = useState(null)
 
   useEffect(() => {
-    const options = {
+      const options = {
       method: 'GET',
-      url: 'https://cryptocurrency-news-live.p.rapidapi.com/crypto-news',
+      url: 'https://crypto-update-live.p.rapidapi.com/news',
       headers: {
-      'x-rapidapi-host': 'cryptocurrency-news-live.p.rapidapi.com',
-      'x-rapidapi-key': process.env.REACT_APP_RAPID_API_KEY
+        'x-rapidapi-host': 'crypto-update-live.p.rapidapi.com',
+        'x-rapidapi-key': process.env.REACT_APP_RAPID_API_KEY
       }
-    };
+    }
 
     axios.request(options).then((response) => {
 	    console.log(response.data)
@@ -20,16 +20,34 @@ const NewsFeed = () => {
     }).catch((error) => {
 	    console.error(error)
     });
+
+
+
+    // const options = {
+    //   method: 'GET',
+    //   url: 'https://cryptocurrency-news-live.p.rapidapi.com/crypto-news',
+    //   headers: {
+    //   'x-rapidapi-host': 'cryptocurrency-news-live.p.rapidapi.com',
+    //   'x-rapidapi-key': process.env.REACT_APP_RAPID_API_KEY
+    //   }
+    // };
+
+    // axios.request(options).then((response) => {
+	  //   console.log(response.data)
+    //   setArticles(response.data)
+    // }).catch((error) => {
+	  //   console.error(error)
+    // });
   }, [])
 
-      const first10 = articles?.slice(0,8)
+      const first10 = articles?.slice(0,10)
 
   return (
     <div className='NewsFeed'>
       <h2>Crypto News Feed</h2>
       {first10?.map((article, _index) => (
         <div key={_index}>
-           <a href={article.url}><p>{article.title}</p></a>
+           <a href={article.URL}><p>{article.Title}</p></a>
         </div>))}
     </div>
   )
