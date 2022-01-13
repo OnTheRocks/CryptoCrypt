@@ -41,7 +41,7 @@ const CurrencyConverter = () => {
   return (
     <div className='CurrencyConverter'>
       <h2>Currency Converter!</h2>
-        <div className=''>
+        <div className='input-box'>
         <table>
           <tbody>
           <tr>
