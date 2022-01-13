@@ -7,16 +7,13 @@ const NewsFeed = () => {
   useEffect(() => {
       const options = {
       method: 'GET',
-      url: 'https://crypto-update-live.p.rapidapi.com/news',
-      headers: {
-        'x-rapidapi-host': 'crypto-update-live.p.rapidapi.com',
-        'x-rapidapi-key': process.env.REACT_APP_RAPID_API_KEY
-      }
+      url: 'http://localhost:8000/news'
     }
 
     axios.request(options).then((response) => {
 	    console.log(response.data)
       setArticles(response.data)
+      
     }).catch((error) => {
 	    console.error(error)
     });
