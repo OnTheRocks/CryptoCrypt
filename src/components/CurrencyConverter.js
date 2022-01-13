@@ -4,7 +4,8 @@ import ExchangeRate from './ExchangeRate'
 
 const CurrencyConverter = () => {
 
-  const currencies = [ 'BTC', 'ETH', 'USD', 'XPR', 'LTC', 'ADA' ]
+  const currencies1 = [ 'BTC', 'ETH', 'DOGE', 'XPR', 'LTC', 'ADA' ]
+  const currencies2 = [ 'USD', 'BTC', 'ETH', 'DOGE', 'XPR', 'LTC', 'ADA' ]
   const [chosenPrimaryCurrency, setChosenPrimaryCurrency] = useState('BTC')
   const [chosenSecondaryCurrency, setChosenSecondaryCurrency] = useState('USD')
   const [amount, setAmount] = useState(1)
@@ -71,7 +72,7 @@ const CurrencyConverter = () => {
                 className='currencyOptions'
                 onChange={(e) => setChosenPrimaryCurrency(e.target.value)}
               >
-                {currencies.map((currency, _index) => (<option key={_index}>{currency}</option>))}
+                {currencies1.map((currency, _index) => (<option key={_index}>{currency}</option>))}
                 </select>
             </td>
           </tr>
@@ -91,7 +92,7 @@ const CurrencyConverter = () => {
                 className='currencyOptions'
                 onChange={(e) => setChosenSecondaryCurrency(e.target.value)}
               >
-                {currencies.map((currency, _index) => (<option key={_index}>{currency}</option>))}
+                {currencies2.map((currency, _index) => (<option key={_index}>{currency}</option>))}
                 </select>
             </td>
           </tr>
