@@ -31,10 +31,13 @@ app.get('/news', (req, res) => {
 })
 
 app.get('/rate', (req, res) => {
+  const fromCurrency = req.query.from_currency
+  const toCurrency = req.query.to_currency
+  console.log("Converting", fromCurrency, "to", toCurrency)
   const options = {
     method: 'GET',
     url: 'https://alpha-vantage.p.rapidapi.com/query',
-    params: {to_currency: 'USD', function: 'CURRENCY_EXCHANGE_RATE', from_currency: 'BTC'},
+    params: {to_currency: toCurrency, function: 'CURRENCY_EXCHANGE_RATE', from_currency: fromCurrency},
     headers: {
       'x-rapidapi-host': 'alpha-vantage.p.rapidapi.com',
       'x-rapidapi-key': process.env.REACT_APP_RAPID_API_KEY
