@@ -53,19 +53,8 @@ code {
 
 }
 
-button {
-  border: none;
-  float: right;
-  margin: 5px;
-  /* padding: 15px; */
-}
-
-Button:hover {
-  background-color: rgb(6, 107, 51) ;
-}
-
-input, select {
-  border: none;
+#convert {  
+  float: right; 
 }
 
 /* ****************************************************** */
@@ -75,4 +64,6 @@ input, select {
 .card-1 {
   width: 70%;
 }
+
+
 

@@ -94,7 +94,7 @@ const CurrencyConverter = () => {
           </tr>
           </tbody>
         </table>
-        <button id='convert' onClick={convert}>Convert!</button>
+        <button id='convert' className="btn btn-outline-success btn-sm" onClick={convert}>Convert!</button>
         </div>
         
       <ExchangeRate 
