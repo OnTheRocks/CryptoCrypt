@@ -1,13 +1,43 @@
-import React from 'react'
+import React, { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import axios from 'axios'
+import ExchangeRate from './ExchangeRate'
 
 const Converter = () => {
 
-  const currencies1 = [ 'BTC', 'ETH', 'DOGE', 'XPR', 'LTC', 'ADA' ]
-  const currencies2 = [ 'USD', 'BTC', 'ETH', 'DOGE', 'XPR', 'LTC', 'ADA' ]
+  const currencies1 = [ 'BTC', 'ETH', 'DOGE','DOT', 'XRP', 'LTC', 'ADA' ]
+  const currencies2 = [ 'USD', 'BTC', 'ETH', 'DOGE', 'DOT', 'XRP', 'LTC', 'ADA' ]
+  const [chosenPrimaryCurrency, setChosenPrimaryCurrency] = useState('BTC')
+  const [chosenSecondaryCurrency, setChosenSecondaryCurrency] = useState('USD')
+  const [amount, setAmount] = useState(1)
+  const [result, setResult] = useState(0)
+  const [exchangedData, setExchangedData] = useState({
+    primaryCurrency: 'BTC',
+    secondaryCurrency: 'USD',
+    exchangeRate: 0
+  })
+
+  console.log(chosenPrimaryCurrency, chosenSecondaryCurrency)
 
   const convert = () => {
-
+      const options = {
+      method: 'GET',
+      url: 'http://localhost:8000/rate',
+      params: {to_currency: chosenSecondaryCurrency, function: 'CURRENCY_EXCHANGE_RATE', from_currency: chosenPrimaryCurrency},
+     }
+   
+    axios.request(options).then((response) => {
+      console.log(response.data)
+      console.log(response.data)
+      setResult(response.data*amount)
+      setExchangedData({
+        primaryCurrency: chosenPrimaryCurrency,
+        secondaryCurrency: chosenSecondaryCurrency,
+        exchangeRate: response.data
+      })
+    }).catch((error) => {
+      console.error(error)
+    })
   }
 
   return (
@@ -32,9 +62,10 @@ const Converter = () => {
                   aria-describedby="inputGroup-sizing-default"/>
                 <select 
                   className="form-select currencyOpts" 
-                  // value={} name="currencyOpt1" 
+                  value={chosenPrimaryCurrency} 
+                  name="currencyOpt1" 
                   aria-label="Default select example"
-                  // onChange={(e) => setChosenPrimaryCurrency(e.target.value)}
+                  onChange={(e) => setChosenPrimaryCurrency(e.target.value)}
                   >{currencies1.map((currency, _index) => (<option key={_index}>{currency}</option>))}
                 </select>
               </div>            
@@ -49,28 +80,20 @@ const Converter = () => {
                   aria-describedby="inputGroup-sizing-default"/>
                 <select 
                   className="form-select currencyOpts" 
-                  // value={} name="currencyOpt1" 
+                  value={chosenSecondaryCurrency} 
+                  name="currencyOpt2" 
                   aria-label="Default select example"
-                  // onChange={(e) => setChosenPrimaryCurrency(e.target.value)}
+                  onChange={(e) => setChosenSecondaryCurrency(e.target.value)}
                   >{currencies2.map((currency, _index) => (<option key={_index}>{currency}</option>))}
                 </select>
               </div>
               <button className="btn btn-success btn-sm" id='convert' type="button" onClick={convert}>Convert</button>
             </div>
           </div>
-        
+        <ExchangeRate exchangedData={exchangedData} />
+      </div>    
       </div>
     </div>
-
-
-    
-
-
-    </div>
-
-    
-
-
   )
 }
 
