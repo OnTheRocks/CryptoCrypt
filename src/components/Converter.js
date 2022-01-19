@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import axios from 'axios'
 import ExchangeRate from './ExchangeRate'
+import Rate from './Rate'
 
 const Converter = () => {
 
@@ -44,11 +45,11 @@ const Converter = () => {
     <div className="container-lg  ">
       
 
-      <div className="p-5 mb-4 bg-light rounded-3">
+      <div className="p-5 mb-4 rounded-3">
       <div className="container-fluid py-5">
         <h1 className="display-5 fw-normal">Currency Converter</h1>
         <p className="col-md-8 fs-4"></p>
-          <div className="card text-white bg-secondary mb-3 card-1">
+          <div className="card text-white  mb-3 converterCard">
             <div className="card-body">
               <h5 className="card-title">Choose a Crypto Currency and convert it into another currency.</h5>
               <div className="input-group mb-3">
@@ -58,6 +59,9 @@ const Converter = () => {
                 <input 
                   type="number" 
                   className="form-control" 
+                  name='currencyOpt1'
+                  value={amount}
+                  onChange={(e) => setAmount(e.target.value)}
                   aria-label="Sizing example input" 
                   aria-describedby="inputGroup-sizing-default"/>
                 <select 
@@ -75,6 +79,8 @@ const Converter = () => {
                   id="inputGroup-sizing-default">Secondary Currency:</span>
                 <input 
                   className="form-control" 
+                  name='currencyAmt2'
+                  value={result}
                   disabled={true}
                   aria-label="Sizing example input" 
                   aria-describedby="inputGroup-sizing-default"/>
@@ -87,10 +93,12 @@ const Converter = () => {
                   >{currencies2.map((currency, _index) => (<option key={_index}>{currency}</option>))}
                 </select>
               </div>
+              <h3 className="card-title">Exchange Rate</h3>
+              <h1 className="card-title">{exchangedData.exchangeRate}</h1>         
+              <p className="card-text">{exchangedData.primaryCurrency} to {exchangedData.secondaryCurrency}</p>
               <button className="btn btn-success btn-sm" id='convert' type="button" onClick={convert}>Convert</button>
             </div>
           </div>
-        <ExchangeRate exchangedData={exchangedData} />
       </div>    
       </div>
     </div>

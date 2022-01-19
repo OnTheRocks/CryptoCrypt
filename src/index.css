@@ -5,6 +5,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #000000;
+  background-image: url(./images/bg.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100%;
+  background-position: center;
 }
 
 code {
@@ -16,6 +22,10 @@ code {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.title {
+  background-color: rgb(64, 167, 102);
 }
 
 .app-wrapper {
@@ -54,15 +64,29 @@ code {
 }
 
 #convert {  
-  float: right; 
+  float: right;  
 }
 
 /* ****************************************************** */
- .currencyOpts {
-   width: 10px;
- }
-.card-1 {
-  width: 70%;
+.container-lg {
+  width: 50%;
+  padding: 0px !important;
+}
+
+.converterCard {
+  background-color: rgb(16, 75, 26) !important;
+  width: 80%;
+}
+
+.newsCard {
+  background-color: rgb(17, 48, 22) !important;
+  max-width: 350px;
+  padding-top: 0px !important;
+}
+
+.p-5 {
+  background-color: rgb(64, 167, 102);
+  width: 100%;
 }
 
 
