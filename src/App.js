@@ -1,7 +1,7 @@
 import Converter from "./components/Converter";
-import CurrencyConverter from "./components/CurrencyConverter";
+// import CurrencyConverter from "./components/CurrencyConverter";
 import News from "./components/News";
-import NewsFeed from "./components/NewsFeed";
+// import NewsFeed from "./components/NewsFeed";
 
 
 const App = () => {

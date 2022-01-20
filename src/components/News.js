@@ -28,7 +28,7 @@ const News = () => {
         <h1 className="card-title">Crypto News</h1>
         {first10?.map((article, _index) => (
         <div key={_index}>
-           <a href={article.URL} target="_blank"><p>{article.Title}</p></a>
+           <a href={article.URL} target="_blank" rel='noreferrer'><p>{article.Title}</p></a>
         </div>))}
       </div>
     </div>

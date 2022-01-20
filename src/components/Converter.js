@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import axios from 'axios'
-import ExchangeRate from './ExchangeRate'
-import Rate from './Rate'
+// import ExchangeRate from './ExchangeRate'
+// import Rate from './Rate'
 
 const Converter = () => {
 

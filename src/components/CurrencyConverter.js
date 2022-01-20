@@ -10,8 +10,8 @@ const CurrencyConverter = () => {
   const [chosenSecondaryCurrency, setChosenSecondaryCurrency] = useState('USD')
   const [amount, setAmount] = useState(1)
   // const [exchangeRate, setExchangeRate] = useState(0)
-  const [primaryCurrencyExchanged, setPrimaryCurrencyExchanged] = useState('BTC')
-  const [secondaryCurrencyExchanged, setSecondaryCurrencyExchanged] = useState('USD')
+  // const [primaryCurrencyExchanged, setPrimaryCurrencyExchanged] = useState('BTC')
+  // const [secondaryCurrencyExchanged, setSecondaryCurrencyExchanged] = useState('USD')
   const [result, setResult] = useState(0)
   const [exchangedData, setExchangedData] = useState({
     primaryCurrency: 'BTC',

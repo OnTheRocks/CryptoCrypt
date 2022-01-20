@@ -25,7 +25,7 @@ code {
 }
 
 .title {
-  background-color: rgb(64, 167, 102);
+  background-color: rgba(64, 167, 102,0.5);
 }
 
 .app-wrapper {
@@ -74,18 +74,17 @@ code {
 }
 
 .converterCard {
-  background-color: rgb(16, 75, 26) !important;
+  background-color: rgba(17, 48, 22, 0.8) !important;
   width: 80%;
 }
 
 .newsCard {
-  background-color: rgb(17, 48, 22) !important;
+  background-color: rgba(17, 48, 22, 0.8) !important;
   max-width: 350px;
-  padding-top: 0px !important;
 }
 
 .p-5 {
-  background-color: rgb(64, 167, 102);
+  background-color: rgba(64, 167, 102,0.5);
   width: 100%;
 }
 
