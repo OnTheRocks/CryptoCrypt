@@ -23,7 +23,7 @@ const Converter = () => {
   const convert = () => {
       const options = {
       method: 'GET',
-      url: 'http://localhost:8000/rate',
+      url: '/rate',
       params: {to_currency: chosenSecondaryCurrency, function: 'CURRENCY_EXCHANGE_RATE', from_currency: chosenPrimaryCurrency},
      }
    
