@@ -6,8 +6,8 @@ import axios from 'axios'
 
 const Converter = () => {
 
-  const currencies1 = [ 'BTC', 'ETH', 'DOGE','DOT', 'XRP', 'LTC', 'ADA' ]
-  const currencies2 = [ 'USD', 'BTC', 'ETH', 'DOGE', 'DOT', 'XRP', 'LTC', 'ADA' ]
+  const currencies1 = [ 'BTC', 'ETH', 'DOT', 'XRP', 'LTC', 'ADA' ]
+  const currencies2 = [ 'USD', 'BTC', 'ETH', 'DOT', 'XRP', 'LTC', 'ADA' ]
   const [chosenPrimaryCurrency, setChosenPrimaryCurrency] = useState('BTC')
   const [chosenSecondaryCurrency, setChosenSecondaryCurrency] = useState('USD')
   const [amount, setAmount] = useState(1)
