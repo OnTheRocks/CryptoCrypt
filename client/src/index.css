@@ -1,7 +1,6 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -16,4 +15,65 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.app-wrapper {
+  display: flex;
+  justify-content: center;
+  /* flex-direction: column; */
+  /* display: grid;
+  place-items: center; */
+}
+
+.convertContainer {
+  /* border: red solid 2px; */
+  /* display: grid;
+  place-items: center; */
+  padding: 1em;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  max-width: 25rem;
+  color: black;
+  background-color: rgba(64, 167, 102,0.5); 
+}
+
+.newsContainer {
+  /* display: grid;
+  place-items: center; */
+  padding: 1em;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  max-width: 25rem;
+  color: whitesmoke;
+  /* border: red solid 2px; */
+  background-color: rgba(17, 48, 22, 0.8); 
+}
+
+.body {
+  display: grid;
+  place-items: center;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  font-size: clamp(2rem, 1rem + 10vw, 3rem);
+
+}
+
+p {
+  color: white;
+}
+
+p:hover {
+  color: rgba(64, 167, 102,0.5);
+  font-style: italic;
+}
+
+a {
+  text-decoration: none;
+  ;
 }

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css'
+// import 'bootstrap/dist/css/bootstrap.min.css'
 import axios from 'axios'
 // import ExchangeRate from './ExchangeRate'
 // import Rate from './Rate'
@@ -42,12 +42,10 @@ const Converter = () => {
   }
 
   return (
-    <div className="container-lg  ">
-      
-
+    <div className="convertContainer"> 
       <div className="p-5 mb-4 rounded-3">
       <div className="container-fluid py-5">
-        <h1 className="display-5 fw-normal">Currency Converter</h1>
+        <header>Currency Converter</header>
         <p className="col-md-8 fs-4"></p>
           <div className="card text-white  mb-3 converterCard">
             <div className="card-body">
@@ -55,7 +53,7 @@ const Converter = () => {
               <div className="input-group mb-3">
                 <span 
                   className="input-group-text" 
-                  id="inputGroup-sizing-default">Primary Currency:</span>
+                  id="inputGroup-sizing-default">Currency 1:</span>
                 <input 
                   type="number" 
                   className="form-control" 
@@ -76,7 +74,7 @@ const Converter = () => {
               <div className="input-group mb-3">  
                 <span 
                   className="input-group-text" 
-                  id="inputGroup-sizing-default">Secondary Currency:</span>
+                  id="inputGroup-sizing-default">Currency 2:</span>
                 <input 
                   className="form-control" 
                   name='currencyAmt2'

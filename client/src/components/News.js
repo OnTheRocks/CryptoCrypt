@@ -23,11 +23,12 @@ const News = () => {
       const first10 = articles?.slice(0,5)
 
   return (
-    <div className="card text-white  mb-3 newsCard">
-      <div className="card-body">
-        <h1 className="card-title">Crypto News</h1>
+    <div className="newsContainer">
+      <header>Crypto News</header>
+      <div className="body">        
         {first10?.map((article, _index) => (
         <div key={_index}>
+
            <a href={article.URL} target="_blank" rel='noreferrer'><p>{article.Title}</p></a>
         </div>))}
       </div>
