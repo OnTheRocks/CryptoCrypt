@@ -8,14 +8,18 @@ import News from "./components/News";
 const App = () => {
   return (
     <div className="App">     
-      <h1 className="display-5 fw-bold title">CryptoCrypt</h1>
+      <h1 className="title">CryptoCrypt</h1>
       {/* <div className="app-wrapper">
         <CurrencyConverter />  
         <NewsFeed />   
       </div> */}
       <div className="app-wrapper">
-        <Converter />
-        <News />
+        <div className="box box1">
+          <Converter />
+        </div>
+        <div className="box box2">
+          <News />
+        </div>
       </div>
       
 Photo by Karolina Grabowska from Pexels

@@ -27,7 +27,8 @@ code {
 }
 
 .title {
-  background-color: rgba(64, 167, 102,0.5);
+  color: pink;
+  background-color: black;
 }
 
 /* .app-wrapper {
