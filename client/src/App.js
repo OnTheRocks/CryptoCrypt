@@ -9,10 +9,6 @@ const App = () => {
   return (
     <div className="App">     
       <h1 className="title">CryptoCrypt</h1>
-      {/* <div className="app-wrapper">
-        <CurrencyConverter />  
-        <NewsFeed />   
-      </div> */}
       <div className="app-wrapper">
         <div className="box box1">
           <Converter />

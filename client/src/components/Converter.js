@@ -45,7 +45,7 @@ const Converter = () => {
     <div className="convertContainer"> 
       <div className="p-5 mb-4 rounded-3">
       <div className="container-fluid py-5">
-        <header>Currency Converter</header>
+        <h1 className='header'>Currency Converter</h1>
         <p className="col-md-8 fs-4"></p>
           <div className="card text-white  mb-3 converterCard">
             <div className="card-body">

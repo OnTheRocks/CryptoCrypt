@@ -20,15 +20,14 @@ const News = () => {
 
   }, [])
 
-      const first10 = articles?.slice(0,5)
+      const first10 = articles?.slice(0,10)
 
   return (
     <div className="newsContainer">
-      <header>Crypto News</header>
-      <div className="body">        
+      <h1 className='header'>Crypto News</h1>
+      <div>        
         {first10?.map((article, _index) => (
         <div key={_index}>
-
            <a href={article.URL} target="_blank" rel='noreferrer'><p>{article.Title}</p></a>
         </div>))}
       </div>
