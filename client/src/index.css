@@ -17,10 +17,6 @@ code {
     monospace;
 }
 
-/* .App {
-
-} */
-
 .title {
   text-align: center;
   font-family: 'Mitr', sans-serif;
@@ -49,19 +45,13 @@ code {
 .converterCard {
   background-color: rgba(17, 48, 22, 0.8) !important;
   width: 100%;
-  color: white;
+  color: rgba(192, 247, 212, 0.5);
   border-radius: 3px;
 }
 
 .newsContainer {
-  /* display: grid;
-  place-items: center; */
   padding: 1em;
-  /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
-  /* font-family: 'Mitr', sans-serif; */
   max-width: 25rem;
-  
-  /* border: red solid 2px; */
   background-color: rgba(17, 48, 22, 0.8); 
 }
 
@@ -79,17 +69,15 @@ code {
 }
 
 p {
-  color: rgba(64, 167, 102,0.5);
+  color: rgba(192, 247, 212, 0.5);
 }
 
 p:hover {
-  color: rgba(64, 167, 102,0.5);
-  /* text-decoration-color:red; */
+  color: rgba(4, 250, 90, 0.5);
   font-style: italic;
   
 }
 
 a {
   text-decoration: none;
-  /* text-decoration-color:white; */
 }

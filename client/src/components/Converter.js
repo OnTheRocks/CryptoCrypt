@@ -94,35 +94,6 @@ const Converter = () => {
               <h3 className="card-title">Exchange Rate</h3>
               <h1 className="card-title">{exchangedData.exchangeRate}</h1>         
               <p className="card-text">{exchangedData.primaryCurrency} to {exchangedData.secondaryCurrency}</p>
-
-
-{/* <div className="input-group input-group-sm mb-3">
-  <div className="input-group-prepend">
-    <span className="input-group-text" id="inputGroup-sizing-sm">Primary Currency:</span>
-  </div>
-  <input type="number" className="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"/>
-</div>
-
-
-
-<div className="input-group input-group-sm mb-3">
-  <div className="input-group-prepend">
-    <span className="input-group-text" id="inputGroup-sizing-sm">Secondary Currency:</span>
-  </div>
-  <input type="text" className="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"/>
-  <select 
-                  className="form-select currencyOpts" 
-                  value={chosenSecondaryCurrency} 
-                  name="currencyOpt2" 
-                  aria-label="Default select example"
-                  onChange={(e) => setChosenSecondaryCurrency(e.target.value)}
-                  >{currencies2.map((currency, _index) => (<option key={_index}>{currency}</option>))}
-  </select>
-</div> */}
-
-
-
-
               <button className="btn btn-success btn-sm" id='convert' type="button" onClick={convert}>Convert</button>
             </div>
           </div>
